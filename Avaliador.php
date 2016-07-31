@@ -10,7 +10,9 @@ class Avaliador
             if($lance->getValor() > $this->maiorValor)
             {
                 $this->maiorValor = $lance->getValor();
-            }else if($lance->getValor() < $this->menorValor) {
+            }
+
+            if($lance->getValor() < $this->menorValor) {
                 $this->menorValor = $lance->getValor();
             }
         }
