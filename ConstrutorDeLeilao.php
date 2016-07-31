@@ -22,7 +22,7 @@ class ConstrutorDeLeilao
         return $this;
     }
 
-    public function controi()
+    public function constroi()
     {
         return $this->leilao;
     }

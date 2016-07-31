@@ -77,7 +77,7 @@ class AvaliadorTest extends PHPUnit_Framework_TestCase
         $mauricio = new Usuario("Mauricio");
 
         $construtor = new ConstrutorDeLeilao();
-        $leilao = $construtor->para("Play 4")->lance($renan, 200)->lance($mauricio,300)->lance($renan, 400)->lance($mauricio,500)->controi();
+        $leilao = $construtor->para("Play 4")->lance($renan, 200)->lance($mauricio,300)->lance($renan, 400)->lance($mauricio,500)->constroi();
 //        $leilao->propoe(new Lance($renan, 200));
 //        $leilao->propoe(new Lance($mauricio, 300));
 //        $leilao->propoe(new Lance($renan, 400));
@@ -89,5 +89,17 @@ class AvaliadorTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(500, $this->leiloeiro->getMaiores()[0]->getValor());
         $this->assertEquals(400, $this->leiloeiro->getMaiores()[1]->getValor());
         $this->assertEquals(300, $this->leiloeiro->getMaiores()[2]->getValor());
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testDeveRecusarLeilaoSemLances()
+    {
+        $construtor = new ConstrutorDeLeilao();
+
+        $leilao = $construtor->para("Play 4")->constroi();
+
+        $this->leiloeiro->avalia($leilao);
     }
 }
