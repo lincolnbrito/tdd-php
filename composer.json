@@ -1,0 +1,13 @@
+{
+    "name": "lincoln/php-tdd",
+    "description": "PHPUnit examples",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lincoln Brito",
+            "email": "lincoln.sbrito@gmail.com"
+        }
+    ],
+    "require": {}
+}
