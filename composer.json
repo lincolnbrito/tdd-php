@@ -9,5 +9,8 @@
             "email": "lincoln.sbrito@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.4.*"
+    }
 }
