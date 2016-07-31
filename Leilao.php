@@ -1,4 +1,4 @@
-<?php namespace Leilao;
+<?php
 
 class Leilao
 {
